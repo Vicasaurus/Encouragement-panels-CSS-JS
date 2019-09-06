@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merienda";
+
+
+}
+
+.panels{
+min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+/*the transition makes all the panels come in with a delay*/
+.panel {
+
+     color: white;
+     align-items: center;
+     transition:
+       font-size 1s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+       flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+       background 2s;
+     font-size: 25px;
+     background-size: cover;
+     background-position: center;
+     flex: 1;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+   }
+   .panel > *{
+     margin: 0;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: transform 0.5s ease;
+     flex: 1 0 auto;
+   }
+   /*when the panel is opened, its first flex item disappears*/
+   .panel > *:first-child{
+     transform: translateY(-100%);}
+
+     .panel > *:last-child{
+       transform: translateY(100%);
+   }
+   /*when the panel is opened, its first flex item comes back*/
+   .panel.open-active > *:first-child {
+     transform: translateY(0);
+   }
+   .panel.open-active > *:last-child{
+     transform: translateY(0);
+   }
+  .panel.open{
+    font-size: 40px;
+    flex: 5;
+  }
+
+   /*sets background images*/
+   .panel1 {
+      background-image:url(pics/13-Amazing-HD-Images-From-Science-World-Gathered-By-Royal-Photographic-Society-12.jpg);
+    }
+   .panel2 {
+      background-image:url(pics/panelimage.jpg);
+    }
+   .panel3 {
+      background-image:url(pics/IMG_2534.jpg);
+     }
+   .panel4 {
+      background-image:url(pics/95965-leopard-animals-closeup-748x468.jpg);
+     }
+   .panel5 {
+      background-image:url(pics/7041524-high-resolution-nature-wallpapers-hd.jpg);
+    }
